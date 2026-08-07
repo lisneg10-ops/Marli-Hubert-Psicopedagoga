@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Marli Humbert — Psicopedagoga</title>
+  <meta name="description" content="Marli Humbert — Psicopedagoga com 20+ anos de experiência, atendimento humanizado em avaliação, intervenção e acolhimento." />
+  <meta name="author" content="Marli Humbert" />
+  <meta name="theme-color" content="#1a7a6e" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #1a7a6e;
+      --primary-dark: #135b52;
+      --primary-soft: #e8f5f3;
+      --accent: #d4749d;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --cream: #f9fafb;
+      --white: #ffffff;
+      --shadow: 0 20px 45px rgba(17, 64, 57, 0.12);
+      --radius: 24px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1150px, calc(100% - 2rem)); margin: 0 auto; }
+    .section { padding: 5rem 0; }
+    .section-title {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      color: var(--primary);
+      font-size: clamp(2rem, 3vw, 2.6rem);
+      line-height: 1.1;
+      margin: 0 0 1rem;
+    }
+    .section-subtitle { color: var(--muted); max-width: 720px; margin: 0 0 2rem; font-size: 1rem; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 80;
+      backdrop-filter: blur(10px);
+      background: rgba(249, 250, 251, 0.92);
+      border-bottom: 1px solid rgba(17, 64, 57, 0.07);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem 0; }
+    .brand { display: flex; align-items: center; gap: 0.7rem; font-weight: 700; color: var(--primary); font-size: 1.05rem; letter-spacing: -0.02em; }
+    .brand .icon { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: var(--primary-soft); font-size: 1.1rem; }
+    .nav-links { display: flex; align-items: center; gap: 1.4rem; list-style: none; margin: 0; padding: 0; }
+    .nav-links a { font-size: 0.92rem; color: var(--muted); font-weight: 600; transition: color 0.2s ease; }
+    .nav-links a:hover { color: var(--primary); }
+    .button {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.82rem 1.3rem; border-radius: 999px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: var(--white); font-weight: 700;
+      box-shadow: 0 12px 25px rgba(26, 122, 110, 0.22); border: 0; cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .button:hover { transform: translateY(-2px); box-shadow: 0 16px 30px rgba(26, 122, 110, 0.26); }
+    .button.secondary { background: var(--white); color: var(--primary); border: 1px solid rgba(26, 122, 110, 0.2); box-shadow: none; }
+
+    .hero {
+      position: relative; overflow: hidden; min-height: 88vh; display: grid; align-items: center;
+      background: linear-gradient(135deg, rgba(17, 64, 57, 0.86), rgba(40, 92, 74, 0.78)), url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80") center/cover;
+      color: var(--white);
+    }
+    .hero .container { padding: 5.5rem 0; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 2rem; align-items: center; }
+    .hero h1 { font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(2.6rem, 5vw, 4.2rem); line-height: 1.05; margin: 0 0 1rem; letter-spacing: -0.03em; }
+    .hero p { font-size: 1.03rem; color: rgba(255,255,255,0.9); max-width: 620px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.8rem; }
+    .hero-card { background: rgba(255,255,255,0.96); color: var(--text); padding: 1.4rem; border-radius: 20px; box-shadow: var(--shadow); border: 1px solid rgba(255,255,255,0.18); }
+    .hero-card h3 { margin: 0 0 0.5rem; color: var(--primary); font-size: 1rem; }
+    .hero-card p { color: var(--muted); margin: 0; font-size: 0.95rem; }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; }
+    .card { background: var(--white); border-radius: var(--radius); padding: 1.8rem; box-shadow: var(--shadow); border: 1px solid rgba(26, 122, 110, 0.06); }
+    .card-list { display: grid; gap: 0.9rem; margin: 0; padding: 0; list-style: none; }
+    .card-list li { display: flex; gap: 0.7rem; align-items: flex-start; color: var(--muted); line-height: 1.6; }
+    .card-list li::before { content: "✓"; color: var(--primary); font-weight: 700; margin-top: 0.1rem; }
+
+    .stats { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: var(--white); padding: 3rem 0; }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.2rem; text-align: center; }
+    .stat { padding: 1rem; }
+    .stat strong { display: block; font-size: 2rem; margin-bottom: 0.25rem; font-family: "Cormorant Garamond", Georgia, serif; }
+
+    .services-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.2rem; }
+    .service-card { background: var(--white); border-radius: 20px; padding: 1.5rem; box-shadow: var(--shadow); border: 1px solid rgba(26, 122, 110, 0.06); }
+    .service-card .icon { font-size: 2rem; margin-bottom: 0.65rem; }
+    .service-card h3 { font-size: 1.07rem; margin: 0 0 0.5rem; color: var(--primary); }
+    .service-card p { margin: 0; color: var(--muted); font-size: 0.95rem; line-height: 1.7; }
+
+    .testimonial-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
+    .testimonial { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: var(--white); border-radius: 22px; padding: 1.6rem; box-shadow: var(--shadow); }
+    .testimonial blockquote { margin: 0 0 1rem; font-style: italic; font-size: 1rem; line-height: 1.7; }
+    .author { display: flex; align-items: center; gap: 0.9rem; }
+    .author img { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255,255,255,0.35); }
+    .author strong { display: block; }
+    .author span { color: rgba(255,255,255,0.8); font-size: 0.9rem; }
+
+    .contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 2.2rem; align-items: start; }
+    .contact-card { background: var(--white); border-radius: 22px; padding: 1.5rem; box-shadow: var(--shadow); border: 1px solid rgba(26, 122, 110, 0.06); }
+    .contact-card h3 { margin: 0 0 0.5rem; color: var(--primary); }
+    .contact-card p, .contact-card a { color: var(--muted); margin: 0; line-height: 1.7; }
+    .contact-card a { color: var(--primary); font-weight: 600; }
+    .contact-card .item { display: flex; gap: 0.75rem; align-items: flex-start; padding: 0.8rem 0; border-top: 1px solid rgba(17, 64, 57, 0.08); }
+    .contact-card .item:first-of-type { border-top: 0; padding-top: 0; }
+    form { display: grid; gap: 0.9rem; }
+    label { font-size: 0.9rem; font-weight: 700; color: var(--text); }
+    input, select, textarea { font: inherit; width: 100%; padding: 0.9rem 1rem; border-radius: 14px; border: 1px solid rgba(17, 64, 57, 0.12); background: #fff; color: var(--text); }
+    input:focus, select:focus, textarea:focus { outline: 2px solid rgba(26, 122, 110, 0.16); border-color: var(--primary); }
+
+    footer { background: #0f2d27; color: rgba(255,255,255,0.9); padding: 2.2rem 0; font-size: 0.94rem; }
+    .footer-grid { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; align-items: center; }
+
+    @media (max-width: 900px) {
+      .hero .container, .grid-2, .contact-wrap { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .testimonial-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .hero { min-height: auto; }
+      .hero .container { padding: 4rem 0; }
+      .services-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr; }
+      .section { padding: 3.8rem 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#topo" aria-label="Voltar ao início"><span class="icon">🌱</span><span>Marli Humbert</span></a>
+      <nav aria-label="Menu principal"><ul class="nav-links"><li><a href="#sobre">Sobre</a></li><li><a href="#servicos">Serviços</a></li><li><a href="#depoimentos">Depoimentos</a></li><li><a href="#contato">Contato</a></li></ul></nav>
+      <a class="button" href="#contato">Agendar agora</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="topo" class="hero">
+      <div class="container">
+        <div>
+          <p style="margin:0 0 0.7rem; text-transform:uppercase; letter-spacing:0.3em; font-size:0.78rem; color:rgba(255,255,255,0.75);">Psicopedagogia • Neuropsicopedagogia • Acolhimento</p>
+          <h1>Transforme a aprendizagem, transforme vidas.</h1>
+          <p>Atendimento especializado para crianças, adolescentes, adultos e famílias, com avaliação, intervenção e desenvolvimento integral de forma humana e profissional.</p>
+          <div class="hero-actions">
+            <a class="button" href="#contato">Agendar avaliação</a>
+            <a class="button secondary" href="#servicos">Conhecer serviços</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h3>Uma abordagem acolhedora e profissional</h3>
+          <p>Minha prática une escuta, conhecimento técnico e estratégias individuais para fortalecer a confiança, a autonomia e o potencial de aprendizagem.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="section">
+      <div class="container grid-2">
+        <div class="card">
+          <h2 class="section-title">Sobre Marli Humbert</h2>
+          <p class="section-subtitle">Sou Pedagoga e Psicopedagoga com mais de 20 anos de experiência, dedicados à educação, ao desenvolvimento e ao fortalecimento da aprendizagem.</p>
+          <ul class="card-list">
+            <li>Atendimento humanizado e individualizado para cada pessoa.</li>
+            <li>Formação sólida em Pedagogia, Psicopedagogia, Orientação Educacional e Terapia ABA.</li>
+            <li>Trabalho com acolhimento, escuta e estratégias específicas para cada desafio.</li>
+            <li>Integro aspectos cognitivos, emocionais e sociais no processo de desenvolvimento.</li>
+          </ul>
+        </div>
+        <div class="card"><img src="https://images.pexels.com/photos/3768996/pexels-photo-3768996.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Ambiente acolhedor de atendimento" style="border-radius:20px;" /></div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="container stats-grid">
+        <div class="stat"><strong>20+</strong><span>Anos de experiência</span></div>
+        <div class="stat"><strong>500+</strong><span>Pessoas atendidas</span></div>
+        <div class="stat"><strong>95%</strong><span>Índice de satisfação</span></div>
+        <div class="stat"><strong>5</strong><span>Especialidades</span></div>
+      </div>
+    </section>
+
+    <section id="servicos" class="section">
+      <div class="container">
+        <h2 class="section-title">Serviços e áreas de atendimento</h2>
+        <p class="section-subtitle">A Psicopedagogia atua na investigação, prevenção e intervenção das dificuldades de aprendizagem, respeitando o contexto e o ritmo de cada pessoa.</p>
+        <div class="services-grid">
+          <article class="service-card"><div class="icon">📚</div><h3>Leitura e Escrita</h3><p>Atendimento para alfabetização, leitura, escrita, compreensão textual e desenvolvimento da linguagem.</p></article>
+          <article class="service-card"><div class="icon">🔢</div><h3>Matemática</h3><p>Suporte para dificuldades com raciocínio lógico, operações e processos de aprendizagem matemática.</p></article>
+          <article class="service-card"><div class="icon">🧩</div><h3>TDAH e Transtornos</h3><p>Apoio para dificuldades de atenção, organização, concentração e outras demandas específicas.</p></article>
+          <article class="service-card"><div class="icon">🎯</div><h3>ABA</h3><p>Intervenção comportamental aplicada para desenvolvimento de habilidades e autonomia.</p></article>
+          <article class="service-card"><div class="icon">🧠</div><h3>Neuropsicopedagogia</h3><p>Investigação de processos neurocognitivos e orientação para casos mais complexos.</p></article>
+          <article class="service-card"><div class="icon">💛</div><h3>Acolhimento emocional</h3><p>Atendimento que entende o impacto emocional nas dificuldades de aprendizagem e no desenvolvimento.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Como é feita a avaliação</h2>
+        <p class="section-subtitle">O processo é conduzido de forma completa, observando a história, o contexto e o funcionamento da aprendizagem.</p>
+        <div class="services-grid">
+          <article class="service-card"><div class="icon">🗣️</div><h3>Entrevista clínica</h3><p>Coleta de informações com a pessoa e a família para compreender o contexto e o histórico.</p></article>
+          <article class="service-card"><div class="icon">👀</div><h3>Observação</h3><p>Análise do comportamento e das estratégias utilizadas em diferentes situações.</p></article>
+          <article class="service-card"><div class="icon">📋</div><h3>Testes e tarefas</h3><p>Aplicação de instrumentos para avaliar funções cognitivas e desempenho escolar.</p></article>
+          <article class="service-card"><div class="icon">🔗</div><h3>Integração de dados</h3><p>Leitura conjunta dos resultados para produzir um diagnóstico e um plano de ação coerente.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="depoimentos" class="section">
+      <div class="container">
+        <h2 class="section-title">Depoimentos</h2>
+        <p class="section-subtitle">Algumas palavras de pessoas que passaram por esse processo com acolhimento, clareza e confiança.</p>
+        <div class="testimonial-grid">
+          <article class="testimonial">
+            <blockquote>“A Marli foi essencial para o desenvolvimento do meu filho. O cuidado, a atenção e a clareza do trabalho fizeram uma grande diferença.”</blockquote>
+            <div class="author"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&h=120&fit=crop" alt="Foto de cliente" /><div><strong>Deana</strong><span>Mãe · acompanhamento de 18 meses</span></div></div>
+          </article>
+          <article class="testimonial">
+            <blockquote>“A evolução em matemática foi muito rápida, e hoje ele estuda com mais segurança e vontade. Recomendo de coração.”</blockquote>
+            <div class="author"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop" alt="Foto de cliente" /><div><strong>Júlia Barracci</strong><span>Mãe · acompanhamento de 10 meses</span></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="section">
+      <div class="container contact-wrap">
+        <div class="contact-card">
+          <h3>Vamos conversar?</h3>
+          <p>Se você procura acolhimento profissional e uma abordagem séria para a aprendizagem, estou à disposição para te ajudar.</p>
+          <div class="item" style="margin-top:1rem;"><span>📱</span><div><strong>WhatsApp</strong><br><a href="https://wa.me/5551999752389">(51) 99975-2389</a></div></div>
+          <div class="item"><span>✉️</span><div><strong>E-mail</strong><br><a href="mailto:mhumbertoliv@yahoo.com.br">mhumbertoliv@yahoo.com.br</a></div></div>
+          <div class="item"><span>📍</span><div><strong>Endereço</strong><br>João de Oliveira Remião, 2160 — Porto Alegre/RS</div></div>
+        </div>
+        <div class="contact-card">
+          <h3>Envie uma mensagem</h3>
+          <form action="mailto:mhumbertoliv@yahoo.com.br" method="post" enctype="text/plain">
+            <label for="nome">Nome</label>
+            <input id="nome" name="nome" type="text" required />
+            <label for="telefone">Telefone</label>
+            <input id="telefone" name="telefone" type="tel" required />
+            <label for="servico">Serviço de interesse</label>
+            <select id="servico" name="servico" required>
+              <option value="">Selecione</option>
+              <option value="psicopedagogia">Psicopedagogia</option>
+              <option value="neuropsicopedagogia">Neuropsicopedagogia</option>
+              <option value="aba">ABA</option>
+              <option value="psicologia">Psicologia</option>
+            </select>
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte um pouco sobre sua necessidade..."></textarea>
+            <button class="button" type="submit">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>© 2026 Marli Humbert • Psicopedagoga</div>
+      <div>Espaço Aprender a Aprender • Transformando desafios em oportunidades</div>
+    </div>
+  </footer>
+</body>
+</html>
