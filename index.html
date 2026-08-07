@@ -132,7 +132,7 @@
     /* HERO / PARALLAX */
     .hero {
       position: relative;
-      min-height: 88vh;
+      min-height: 80vh; /* reduzir para evitar corte do título */
       display: grid;
       place-items: center;
       padding: 0;
@@ -159,7 +159,7 @@
       z-index: 1;
       max-width: 820px;
       margin: 0 auto;
-      padding: 0 20px;
+      padding: 6vh 20px 0; /* deslocar conteúdo para baixo abaixo da navbar */
       text-align: center;
       color: #F2EEE4;
     }
@@ -168,13 +168,13 @@
       letter-spacing: 0.36em;
       color: var(--kicker-color);
       margin-bottom: 0.9rem;
-      margin-top: -0.6rem;
+      margin-top: -0.2rem;
       display: block;
     }
     .hero-title {
-      font-size: clamp(4.2rem, 7.5vw, 7.2rem);
-      line-height: 0.92;
-      letter-spacing: -0.03em;
+      font-size: clamp(2.8rem, 6.5vw, 5.2rem); /* reduzir tamanho máximo do título */
+      line-height: 0.98;
+      letter-spacing: -0.02em;
       margin-bottom: 0.6rem;
       text-rendering: optimizeLegibility;
       -webkit-font-smoothing: antialiased;
